@@ -2,7 +2,19 @@
   "name": "bun-react-template",
   "version": "0.1.0",
   "private": true,
+  "description": "To install dependencies:",
+  "homepage": "https://github.com/Sahilb315/vet-action-test#readme",
+  "bugs": {
+    "url": "https://github.com/Sahilb315/vet-action-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sahilb315/vet-action-test.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "dev": "bun --hot src/index.tsx",
     "build": "bun run build.ts"
