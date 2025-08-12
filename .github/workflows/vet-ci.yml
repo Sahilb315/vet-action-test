@@ -37,6 +37,13 @@ jobs:
         env:
           # Required for writing pull request comment
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Debug vet outputs
+        run: |
+          echo "vet report output: '${{ steps.vet.outputs.report }}'"
+          if [ -n "${{ steps.vet.outputs.report }}" ]; then
+            ls -l "${{ steps.vet.outputs.report }}"
+            head -100 "${{ steps.vet.outputs.report }}"
+          fi
 
       - name: Upload SARIF
         uses: github/codeql-action/upload-sarif@v3
